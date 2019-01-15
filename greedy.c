@@ -8,16 +8,20 @@ int main(void)
     int a = 0, b = 0, c = 0, d = 0;
 
     // this prompts the user to give an input which can have floating point.
-    do
-    {
-        change = get_float("O hai! How much change is owed?\n");
+    do{
+        printf("Change owed: ");
+        while (scanf("%f", &change) != 1)
+        {
+            printf("Change owed: ");
+            while(getchar() != '\n');            
+        }
     }
-    while (change < 0);
-
-    int cents = (int)round(change * 100);
-
-
-
+    while(change < 0);
+    
+    // converting dollars i.e, float into coins i.e, int
+    int cents = round(change * 100);
+    
+    
     // logic
     // checks the input, if greater or equal to 25, then it divides it from 25 else the loop breaks.
     while (cents >= 25)
