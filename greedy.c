@@ -1,3 +1,4 @@
+// this program will tell you that what is the minimum number of coins which will be needed to give the change.
 #include <stdio.h>
 #include <math.h>
 
